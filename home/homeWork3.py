@@ -75,6 +75,56 @@ evil = Villain('Ivan','kuvalda','strength',300,'я бью 2 раза')
 Villain.crit(Air_h.damage)
 
 
+class Bank:
+    people = 1
+    def __init__(self, name, balanse):
+        self.name = name
+        self.balanse = balanse
+    def __str__(self):
+        return f'{self.balanse}\n' \
+               f'{self.name}\n'
+    def moneyX(self):
+        self.moneyX = int(input('Сколько хотите закинуть: '))
+        self.new=self.moneyX+self.balanse
+        print(self.new)
+    def _kill(self):
+        a = input('Напишите kill что бы обнулить счёт')
+        if a == 'kill':
+            self.balanse=self.moneyX - self.moneyX
+        elif a != 'kill':
+            print(self.new)
+        else:
+            print('Error')
+
+    def __J(self):
+        self.balanse = self.balanse * 10
+        return self.balanse
+
+    def __D(self):
+        e = 100
+        b = input('Хотите перевести деньги?: ')
+        if b == 'Да':
+            print(self.balanse + e)
+        else:
+            print(self.balanse)
+
+
+balanse = Bank('Super', 0)
+print(balanse)
+balanse.moneyX()
+balanse._kill()
+balanse._Bank__J()
+balanse._Bank__D()
+print(balanse._kill())
+print(balanse.moneyX)
+
+
+
+
+
+
+
+
 
 
 

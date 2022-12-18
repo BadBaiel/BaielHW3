@@ -7,15 +7,20 @@ class Emirlan:
     foots=2
     def __init__(self,name='Emirlan',age=18):
         self.__name=name
-        self._age=age
+        self.__age=age
     def __str__(self):
         return f'{self.__name} ' \
-               f'{self._age}'
+               f'{self.__age}'
+    def get_emirlan(self):
+        return f'{self.__name} {self.__age}'
+    def set_emirlan(self, name, age):
+        self.__name=name
+        self.__age=age
 
     def run(self):
         self.__run()
         self.__g()
-        print(self._age - 1)
+        print(self.__age - 1)
         print(self.__name)
 
 
@@ -37,3 +42,6 @@ e.__name='name'
 # print(dir(e))
 r='qwertyu'
 print(dir(e))
+
+amir=Emirlan('Emirlan',  9)
+amir.set_emirlan
